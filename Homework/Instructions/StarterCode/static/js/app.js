@@ -1,35 +1,56 @@
 // from data.js
-var tableData = data;
+  var tableData = data;
 
-// YOUR CODE HERE!
 // Get a reference to the table body
-var tbody = d3.select("tbody");
+  var tbody = d3.select("tbody");
 
 // Console.log the UFO data from data.js
-console.log(data);
-//  Step 1: Loop Through `data` 
-data.forEach(function (UFOSighting) {
-  // Step 2:  Use d3 to append one table row `tr` for each UFO  object
-  console.log(UFOSighting);
-  var row = tbody.append("tr");
-  // Step 3:  Use `Object.entries` 
-  Object.entries(UFOSighting).forEach(function ([key, value]) {
-    console.log(key, value);
-    // Step 4: Use d3 to append 1 cell per UFOSighting value 
-    // Append a cell to the row for each value
-    // in the UFOSighting  object
-    var cell = row.append("td");
-    // Step 5: Use d3 to update each cell's text with UFOSighting  values 
+  console.log(data);
+
+// Select the submit button
+  var submit = d3.select("#filter-btn");
+  submit.on("click", function() {
+
+      // Prevent the page from refreshing
+      d3.event.preventDefault();
+
+      // Select the input element and get the raw HTML node
+     var inputDate = d3.select("#datetime");
+    // var inputCity = d3.select("#cityname");
+      // Get the value property of the input element
+     var input_Date = inputDate.property("value");        
+     //var input_city = inputCity.property("value");
+      // filtering the data on the basis of user input
+     var filterDate = tableData.filter(info => info.datetime === input_Date);
+    // var filterCity = tableData.filter(info => info.city === input_city);
+     console.log(filterDate);
+     //console.log(filterCity);
+     document.getElementsByTagName('tbody')[0].innerHTML = '';
+    // Loop Through `data`
+      filterDate.forEach(function(UFOSighting) {
+    // Use d3 to append one table row `tr` for each UFO  object
+      console.log(UFOSighting);
+     //function UFOSighting(data){
+        var row = tbody.append("tr");
+    //  Use `Object.entries` 
+         Object.entries(UFOSighting).forEach(function ([key, value]) {
+    // console.log(key, value);
     // Append a cell to the row for each value in the UFOSighting  object
-    cell.text(value);
+        var cell = row.append("td");
+    // Append a cell to the row for each value in the UFOSighting  object
+        cell.text(value);
+   // filterDate.forEach(function(UFOSighting) {
   });
 });
+});
 
-// BONUS: Refactor to use Arrow Functions!
-/*data.forEach((UFOSighting) => {
-  var row = tbody.append("tr");
-  Object.entries(UFOSighting).forEach(([key, value]) => {
-    var cell = row.append("td");
-    cell.text(value);
-  });
-});*/
+/*function getdata(filterdata){
+  var filteredDate = tableData.filter(info => info.datetime === inputValue);
+  var filtercity = tableData.filter(info => info.city === input_city_value);
+  //if (filteredDate || filtercity){
+    switch
+      UFOSighting(filteredDate);
+      UFOSighting(filtercity);
+   }
+}*/
+
