@@ -1,7 +1,10 @@
 # JavaScript-and-DOM-Manipulation
 
 
-Using the UFO dataset provided in the form of an array of JavaScript objects, write code that appends a table to your web page and then adds new rows of data for each UFO sighting.
+Using the UFO dataset provided in the form of an array of JavaScript objects, created web page and then adds new rows of data for each UFO sighting.
 
-Make sure you have a column for date/time, city, state, country, shape, and comment at the very least.
-Use a date form in your HTML document and write JavaScript code that will listen for events and search through the date/time column to find rows that match user input.
+Used a date form in HTML document and written JavaScript code that  listens for events and search through the date/time column to find rows that match user input.
+
+
+
+![Screenshot (1)](https://user-images.githubusercontent.com/50187921/63630314-17409c80-c5df-11e9-92c2-14d343ea8608.png)
