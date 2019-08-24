@@ -16,20 +16,29 @@
 
       // Select the input element and get the raw HTML node
      var inputDate = d3.select("#datetime");
-    // var inputCity = d3.select("#cityname");
+     var inputCity = d3.select("#cityname");
+     var inputState = d3.select("#statename");
+     var inputCountry = d3.select("#countryname");
+     var inputShape = d3.select("#shape");
       // Get the value property of the input element
      var input_Date = inputDate.property("value");        
-     //var input_city = inputCity.property("value");
+     var input_City = inputCity.property("value");
+     var input_State = inputState.property("value");
+     var input_Country = inputCountry.property("value");
+     var input_Shape = inputShape.property("value");
       // filtering the data on the basis of user input
      var filterDate = tableData.filter(info => info.datetime === input_Date);
-    // var filterCity = tableData.filter(info => info.city === input_city);
+     var filterCity = tableData.filter(info => info.city === input_City);
+     var filterState = tableData.filter(info => info.state === input_State);
+     var filterCountry = tableData.filter(info => info.country === input_Country);
+     var filterShape = tableData.filter(info => info.shape === input_Shape);
      console.log(filterDate);
-     //console.log(filterCity);
+     console.log(filterCity);
      document.getElementsByTagName('tbody')[0].innerHTML = '';
     // Loop Through `data`
       filterDate.forEach(function(UFOSighting) {
     // Use d3 to append one table row `tr` for each UFO  object
-      console.log(UFOSighting);
+      //console.log(UFOSighting);
      //function UFOSighting(data){
         var row = tbody.append("tr");
     //  Use `Object.entries` 
@@ -39,8 +48,43 @@
         var cell = row.append("td");
     // Append a cell to the row for each value in the UFOSighting  object
         cell.text(value);
-   // filterDate.forEach(function(UFOSighting) {
+      });
+    }); 
+    filterCity.forEach(function(UFOSighting) {
+      console.log(UFOSighting);
+      var row = tbody.append("tr");
+      Object.entries(UFOSighting).forEach(function ([key, value]) {
+        var cell = row.append("td");
+        cell.text(value);
+      
   });
+});
+  filterState.forEach(function(UFOSighting) {
+  console.log(UFOSighting);
+  var row = tbody.append("tr");
+  Object.entries(UFOSighting).forEach(function ([key, value]) {
+    var cell = row.append("td");
+    cell.text(value);
+  
+});
+});
+filterCountry.forEach(function(UFOSighting) {
+  console.log(UFOSighting);
+  var row = tbody.append("tr");
+  Object.entries(UFOSighting).forEach(function ([key, value]) {
+    var cell = row.append("td");
+    cell.text(value);
+  
+});
+});
+filterShape.forEach(function(UFOSighting) {
+  console.log(UFOSighting);
+  var row = tbody.append("tr");
+  Object.entries(UFOSighting).forEach(function ([key, value]) {
+    var cell = row.append("td");
+    cell.text(value);
+  
+});
 });
 });
 
@@ -53,4 +97,14 @@
       UFOSighting(filtercity);
    }
 }*/
-
+/*var city=[];
+function getdata(datafile){
+  for(var i =0;i<datafile.length;i++){
+    Object.entries(datafile).forEach(function ([key, value]) {
+      city.append(value[i]);
+      //var cell = row.append("td");
+     // cell.text(value); 
+  });
+  
+   }
+}*/

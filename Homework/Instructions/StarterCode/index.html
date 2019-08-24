@@ -36,20 +36,21 @@
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
+                        <label for="date">Enter  Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
                       </li>
                       <li class="filter list-group-item">
-                        <label for="date">Enter City</label>
-                       <!-- <input class="form-control" id="cityname" type="text" placeholder="Austin">-->
-                        <select id="selDataset" onchange="getData(this.value)">
+                        <label for="city">Enter City</label>
+                        <input class="form-control" id="cityname" type="text" placeholder="Austin">
+                       <!-- <select id="cityname">   onchange="getData(this.value)">
                           <option value="data">Alma</option>
                           <option value="data">Bonita</option>
-                        </select>
+                        </select>-->
                       </li>
                       <li class="filter list-group-item">
                         <label for="date">Enter State</label>
-                      <select id="selDataset" onchange="getData(this.value)">
+                        <input class="form-control" id="statename" type="text" placeholder="TX">
+                     <!-- <select id="selDataset" onchange="getData(this.value)">
                         <option value="data">TX</option>
                         <option value="data">ar</option>
                         <option value="data">az</option>
@@ -88,16 +89,20 @@
                         <option value="data">ms</option>
                         <option value="data">pa</option>
                                               
-                      </select>
+                      </select>-->
                       </li>
                       <li class="filter list-group-item">
-                        <label for="date">Enter Country</label>
-                       <!-- <input class="form-control" id="country" type="text" placeholder="Country">-->
-                       <select id="selDataset" onchange="getData(this.value)">
+                        <label for="country">Enter Country</label>
+                        <input class="form-control" id="countryname" type="text" placeholder="Country">
+                      <!-- <select id="selDataset" onchange="getData(this.value)">
                         <option value="data">US</option>
                         <option value="data">Canada</option>
-                        </select>
+                        </select>-->
                       </li>
+                      <li class="filter list-group-item">
+                        <label for="shape">Enter Shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="Sphere">
+                      </li>  
                       
                       
                     </ul>
