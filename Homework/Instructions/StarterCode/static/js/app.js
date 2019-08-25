@@ -88,23 +88,4 @@ filterShape.forEach(function(UFOSighting) {
 });
 });
 
-/*function getdata(filterdata){
-  var filteredDate = tableData.filter(info => info.datetime === inputValue);
-  var filtercity = tableData.filter(info => info.city === input_city_value);
-  //if (filteredDate || filtercity){
-    switch
-      UFOSighting(filteredDate);
-      UFOSighting(filtercity);
-   }
-}*/
-/*var city=[];
-function getdata(datafile){
-  for(var i =0;i<datafile.length;i++){
-    Object.entries(datafile).forEach(function ([key, value]) {
-      city.append(value[i]);
-      //var cell = row.append("td");
-     // cell.text(value); 
-  });
-  
-   }
-}*/
+
